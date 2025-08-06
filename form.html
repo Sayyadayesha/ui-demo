@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multi-Step Form</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+
+<body class="smoky-bg">
+  <nav class="navbar">
+    <a href="form.html" class="logo-section" style="text-decoration: none;">
+      <img src="images/logo.jpg" alt="Logo" class="logo-img" />
+      <span class="logo-text"></span>
+    </a>
+    <div class="nav-links">
+      <a href="form.html" class="nav-link"></a>
+    </div>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="change-password.html">Change Password</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </nav>
+
+  <div class="card glass-card">
+    <form id="multiStepForm" method="post" enctype="multipart/form-data">
+      <!-- Step 1: Personal Info -->
+      <div class="form-step active">
+        <h2>Personal Info</h2>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="form-group">
+          <label for="calling_number">Calling Number</label>
+          <input type="tel" id="calling_number" name="calling_number" placeholder="Enter calling number" required />
+        </div>
+        <div class="form-group">
+          <label for="whatsapp_number">WhatsApp Number</label>
+          <input type="tel" id="whatsapp_number" name="whatsapp_number" placeholder="Enter WhatsApp number" required />
+        </div>
+        <div class="form-buttons">
+          <button type="button" class="btn" onclick="nextStep()">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Business Info -->
+      <div class="form-step">
+        <h2>Business Info</h2>
+        <div class="form-group">
+          <label for="business_name">Business Name</label>
+          <input type="text" id="business_name" name="business_name" placeholder="Enter business name" />
+        </div>
+        <div class="form-group">
+          <label for="business_category">Business Category</label>
+          <input type="text" id="business_category" name="business_category" placeholder="Enter business category" />
+        </div>
+        <div class="form-group">
+          <label for="about">About</label>
+          <textarea id="about" name="about" placeholder="Tell us about your business" rows="4"></textarea>
+        </div>
+        <div class="form-buttons">
+          <button type="button" class="btn" onclick="prevStep()">Back</button>
+          <button type="button" class="btn" onclick="nextStep()">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Location & Media -->
+      <div class="form-step">
+        <h2>Location & Media</h2>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" placeholder="Fetching your address..." readonly />
+          <a href="#" id="fetchAddress" class="btn" style="margin-top: 10px;">Get Address</a>
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="">Select Country</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <select name="state" id="state">
+            <option value="">Select State</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="city">City</label>
+          <select name="city" id="city">
+            <option value="">Select City</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="banner_image">Banner Image</label>
+          <input type="file" id="banner_image" name="banner_image" />
+        </div>
+        <div class="form-group">
+          <label for="profile_image">Profile Image</label>
+          <input type="file" id="profile_image" name="profile_image" />
+        </div>
+        <div class="form-buttons">
+          <button type="button" class="btn" onclick="prevStep()">Back</button>
+          <button type="button" class="btn" onclick="nextStep()">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 4: Digital Links -->
+      <div class="form-step">
+        <h2>Digital Links</h2>
+        <div class="form-group">
+          <label for="website">Website</label>
+          <input type="url" id="website" name="website" placeholder="Enter your website" />
+        </div>
+        <div class="form-group">
+          <label for="digital_store">Digital Store</label>
+          <input type="url" id="digital_store" name="digital_store" placeholder="Enter store link" />
+        </div>
+        <div class="form-group">
+          <label for="payment_link">Payment Link</label>
+          <input type="url" id="payment_link" name="payment_link" placeholder="Enter payment link" />
+        </div>
+        <div class="form-group">
+          <label for="upload_qr_code">Upload QR Code</label>
+          <input type="file" id="upload_qr_code" name="upload_qr_code" />
+        </div>
+        <div class="form-group">
+          <label for="insta">Instagram Profile</label>
+          <input type="url" id="insta" name="insta" placeholder="Enter Instagram URL" />
+        </div>
+        <div class="form-group">
+          <label for="fb">Facebook Profile</label>
+          <input type="url" id="fb" name="fb" placeholder="Enter Facebook URL" />
+        </div>
+        <div class="form-group">
+          <label for="youtube">YouTube Channel</label>
+          <input type="url" id="youtube" name="youtube" placeholder="Enter YouTube URL" />
+        </div>
+        <div class="form-group">
+          <label for="video_link">Video Link</label>
+          <input type="url" id="video_link" name="video_link" placeholder="Enter video link" />
+        </div>
+        <div class="form-buttons">
+          <button type="button" class="btn" onclick="prevStep()">Back</button>
+          <button type="button" class="btn" onclick="nextStep()">Next</button>
+        </div>
+      </div>
+
+      <!-- Step 5: Final Uploads -->
+      <div class="form-step">
+        <h2>Final Uploads</h2>
+        <div class="form-group">
+          <label for="voice_note">Voice Note</label>
+          <input type="file" id="voice_note" name="voice_note" />
+        </div>
+        <div class="form-group">
+          <label for="reviews">Reviews</label>
+          <textarea id="reviews" name="reviews" placeholder="Enter reviews" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="enquiry">Enquiry</label>
+          <input type="text" id="enquiry" name="enquiry" placeholder="Enter enquiry details" />
+        </div>
+        <div class="form-group">
+          <label for="profile_pdf">Profile PDF</label>
+          <input type="file" id="profile_pdf" name="profile_pdf" />
+        </div>
+        <div class="form-buttons">
+          <button type="button" class="btn" onclick="prevStep()">Back</button>
+          <button type="submit" class="btn">Create Profile</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="form.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

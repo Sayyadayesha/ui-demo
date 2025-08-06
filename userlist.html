@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User List</title>
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="smoky-bg">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="form.html" class="logo-section" style="text-decoration: none;">
+      <img src="images/logo.jpg" alt="Logo" class="logo-img" />
+      <span class="logo-text">DigiCard</span>
+    </a>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="change-password.html">Change Password</a>
+     <a href="login.html">Logout</a>
+    </div>
+  </nav>
+
+  <!-- User List Wrapper -->
+  <div class="userlist-wrapper">
+    <h2>Premium Users</h2>
+
+    <!-- Filter Section -->
+    <div id="filter-section">
+      <input type="text" id="searchInput" placeholder="Search by name..." />
+
+      <select id="filterProfession">
+        <option value="">Filter by Profession</option>
+        <option value="Engineer">Engineer</option>
+        <option value="Software">Software</option>
+        <option value="Designer">Designer</option>
+      </select>
+
+      <select id="filterBusiness">
+        <option value="">Filter by Business Name</option>
+        <option value="Nova Systems">Nova Systems</option>
+        <option value="Tech World">Tech World</option>
+      </select>
+
+      <select id="filterCity">
+        <option value="">Filter by City</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Pune">Pune</option>
+      </select>
+    </div>
+
+   <!-- User Cards Grid -->
+<div id="userlist-container" class="user-grid">
+  <!-- Each card is wrapped in a link -->
+  <a href="user-details.html?id=1" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Jane Smith</h3>
+      <p>Marketing</p>
+      <div class="tags">
+        <span class="tag">Healthcare</span>
+        <span class="tag">Referral: x9k31c</span>
+        <span class="tag">9928374651</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=2" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=22" alt="Profile" />
+    <div class="info">
+      <h3>Bob Brown</h3>
+      <p>Engineering</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: m7n88r</span>
+        <span class="tag">7812345678</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=3" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=33" alt="Profile" />
+    <div class="info">
+      <h3>Clara Davis</h3>
+      <p>HR</p>
+      <div class="tags">
+        <span class="tag">Education</span>
+        <span class="tag">Referral: z3v14q</span>
+        <span class="tag">9876543210</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=4" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=45" alt="Profile" />
+    <div class="info">
+      <h3>George Hall</h3>
+      <p>Finance</p>
+      <div class="tags">
+        <span class="tag">Retail</span>
+        <span class="tag">Referral: p6b02a</span>
+        <span class="tag">7012349856</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=5" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=58" alt="Profile" />
+    <div class="info">
+      <h3>Fiona Clark</h3>
+      <p>Design</p>
+      <div class="tags">
+        <span class="tag">Finance</span>
+        <span class="tag">Referral: d2a76t</span>
+        <span class="tag">7612345678</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=6" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=61" alt="Profile" />
+    <div class="info">
+      <h3>Alice Johnson</h3>
+      <p>Business</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: x9k31c</span>
+        <span class="tag">9012345678</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=1" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Jane Smith</h3>
+      <p>Marketing</p>
+      <div class="tags">
+        <span class="tag">Healthcare</span>
+        <span class="tag">Referral: x9k31c</span>
+        <span class="tag">9928374651</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=2" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=22" alt="Profile" />
+    <div class="info">
+      <h3>Bob Brown</h3>
+      <p>Engineering</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: m7n88r</span>
+        <span class="tag">7812345678</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=3" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=33" alt="Profile" />
+    <div class="info">
+      <h3>Clara Davis</h3>
+      <p>HR</p>
+      <div class="tags">
+        <span class="tag">Education</span>
+        <span class="tag">Referral: z3v14q</span>
+        <span class="tag">9876543210</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=4" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=45" alt="Profile" />
+    <div class="info">
+      <h3>George Hall</h3>
+      <p>Finance</p>
+      <div class="tags">
+        <span class="tag">Retail</span>
+        <span class="tag">Referral: p6b02a</span>
+        <span class="tag">7012349856</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=5" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=58" alt="Profile" />
+    <div class="info">
+      <h3>Fiona Clark</h3>
+      <p>Design</p>
+      <div class="tags">
+        <span class="tag">Finance</span>
+        <span class="tag">Referral: d2a76t</span>
+        <span class="tag">7612345678</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=6" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=61" alt="Profile" />
+    <div class="info">
+      <h3>Alice Johnson</h3>
+      <p>Business</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: x9k31c</span>
+        <span class="tag">9012345678</span>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="user-details.html?id=1" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=45" alt="Profile" />
+    <div class="info">
+      <h3>Jane Smith</h3>
+      <p>Marketing</p>
+      <div class="tags">
+        <span class="tag">Finance</span>
+        <span class="tag">Referral: m64328</span>
+        <span class="tag">7293847561</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=2" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=22" alt="Profile" />
+    <div class="info">
+      <h3>Bob Brown</h3>
+      <p>Engineering</p>
+      <div class="tags">
+        <span class="tag">Retail</span>
+        <span class="tag">Referral: b73942</span>
+        <span class="tag">9132847652</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=3" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=18" alt="Profile" />
+    <div class="info">
+      <h3>Clara Davis</h3>
+      <p>HR</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: j57394</span>
+        <span class="tag">8094735621</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=4" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=30" alt="Profile" />
+    <div class="info">
+      <h3>George Hall</h3>
+      <p>Finance</p>
+      <div class="tags">
+        <span class="tag">Healthcare</span>
+        <span class="tag">Referral: q48921</span>
+        <span class="tag">7891029384</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=5" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=12" alt="Profile" />
+    <div class="info">
+      <h3>Fiona Clark</h3>
+      <p>Design</p>
+      <div class="tags">
+        <span class="tag">Construction</span>
+        <span class="tag">Referral: z73820</span>
+        <span class="tag">9812345678</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=6" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=41" alt="Profile" />
+    <div class="info">
+      <h3>Alice Johnson</h3>
+      <p>Business</p>
+      <div class="tags">
+        <span class="tag">Real Estate</span>
+        <span class="tag">Referral: v10382</span>
+        <span class="tag">9623498127</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=7" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=34" alt="Profile" />
+    <div class="info">
+      <h3>Mike Thompson</h3>
+      <p>Operations</p>
+      <div class="tags">
+        <span class="tag">Manufacturing</span>
+        <span class="tag">Referral: f67592</span>
+        <span class="tag">8847382930</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=8" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=27" alt="Profile" />
+    <div class="info">
+      <h3>Sara Wilson</h3>
+      <p>Product</p>
+      <div class="tags">
+        <span class="tag">Education</span>
+        <span class="tag">Referral: s92845</span>
+        <span class="tag">7970283745</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=9" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=58" alt="Profile" />
+    <div class="info">
+      <h3>David Lee</h3>
+      <p>Sales</p>
+      <div class="tags">
+        <span class="tag">Telecom</span>
+        <span class="tag">Referral: k19374</span>
+        <span class="tag">8203847562</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=10" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Emily Turner</h3>
+      <p>Customer Support</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: u93847</span>
+        <span class="tag">7023847581</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<a href="user-details.html?id=10" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Emily Turner</h3>
+      <p>Customer Support</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: u93847</span>
+        <span class="tag">7023847581</span>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="user-details.html?id=10" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Emily Turner</h3>
+      <p>Customer Support</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: u93847</span>
+        <span class="tag">7023847581</span>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="user-details.html?id=10" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Emily Turner</h3>
+      <p>Customer Support</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: u93847</span>
+        <span class="tag">7023847581</span>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="user-details.html?id=10" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Emily Turner</h3>
+      <p>Customer Support</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: u93847</span>
+        <span class="tag">7023847581</span>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="user-details.html?id=10" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Emily Turner</h3>
+      <p>Customer Support</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: u93847</span>
+        <span class="tag">7023847581</span>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="user-details.html?id=10" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Emily Turner</h3>
+      <p>Customer Support</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: u93847</span>
+        <span class="tag">7023847581</span>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="user-details.html?id=10" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Emily Turner</h3>
+      <p>Customer Support</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: u93847</span>
+        <span class="tag">7023847581</span>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="user-details.html?id=10" class="user-card-link">
+  <div class="user-card glass-card">
+    <img class="avatar" src="https://i.pravatar.cc/100?img=15" alt="Profile" />
+    <div class="info">
+      <h3>Emily Turner</h3>
+      <p>Customer Support</p>
+      <div class="tags">
+        <span class="tag">Software</span>
+        <span class="tag">Referral: u93847</span>
+        <span class="tag">7023847581</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+
+  <!-- Add more user cards wrapped in <a> as above -->
+</div>
+
+
+    <!-- Numbered Pagination (UI only) -->
+    <div id="pagination" class="pagination-controls">
+      <ul class="pagination-list" id="paginationList">
+        <li class="page-item prev" data-page="prev">‹</li>
+        <li class="page-item active" data-page="1">1</li>
+        <li class="page-item" data-page="2">2</li>
+        <li class="page-item" data-page="3">3</li>
+        <li class="page-item">...</li>
+        <li class="page-item" data-page="10">10</li>
+        <li class="page-item next" data-page="next">›</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="navbar.js"></script>
+  <script src="userlist.js"></script>
+</body>
+</html>

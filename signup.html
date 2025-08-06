@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body class="signup-page">
+
+  <div class="smoky-bg">
+    <div class="center-wrapper">
+      <div class="auth-card">
+        <h2>Create Account</h2>
+
+        <!-- Laravel-Compatible Frontend Form -->
+        <form>
+
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              placeholder="Name" 
+              required />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="Email" 
+              required />
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              placeholder="Create password" 
+              required />
+          </div>
+
+          <!-- Referral Code -->
+          <div class="form-group">
+            <label for="referred_by">Referral Code</label>
+            <input 
+              type="text" 
+              id="referred_by" 
+              name="referred_by" 
+              placeholder="(optional)" />
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn">Sign Up</button>
+
+          <!-- Link to Login -->
+          <p class="link-text">Already have an account? <a href="login.html">Login here</a></p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
